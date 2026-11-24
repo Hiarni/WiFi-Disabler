@@ -63,7 +63,8 @@ data class MainActions(
     val onGrantLocation: () -> Unit = {},
     val onEnableLocationService: () -> Unit = {},
     val onBatteryUnrestricted: () -> Unit = {},
-    val onOpenAppSettings: () -> Unit = {},
+    val onOpenAutostart: () -> Unit = {},
+    val onHideServiceNotification: () -> Unit = {},
     val onDismissReliability: () -> Unit = {},
     val onOpenSource: () -> Unit = {},
 )
@@ -217,13 +218,13 @@ private fun ReliabilityCard(state: UiState, actions: MainActions) {
                 onAction = actions.onBatteryUnrestricted,
             )
         }
-        if (state.aggressiveVendor) {
+        if (state.hasAutostart) {
             SetupRow(
                 done = false,
                 title = stringResource(R.string.reliability_autostart_title),
                 description = stringResource(R.string.reliability_autostart_desc),
                 action = stringResource(R.string.action_open),
-                onAction = actions.onOpenAppSettings,
+                onAction = actions.onOpenAutostart,
             )
         }
     }
@@ -366,6 +367,11 @@ private fun OptionsCard(state: UiState, actions: MainActions) {
             checked = state.settings.reliableMode,
             onChange = actions.onReliableModeChange,
         )
+        if (state.settings.reliableMode) {
+            TextButton(onClick = actions.onHideServiceNotification) {
+                Text(stringResource(R.string.option_reliable_hide_notification))
+            }
+        }
         SwitchRow(
             title = stringResource(R.string.option_notify_title),
             description = stringResource(R.string.option_notify_desc),

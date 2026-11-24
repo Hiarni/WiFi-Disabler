@@ -40,14 +40,14 @@ class ScreenshotTest {
         ),
         setup = SetupState(locationGranted = true, backgroundLocationGranted = true, locationServiceOn = true, batteryUnrestricted = true),
         currentSsid = "Corner Cafe",
-        versionName = "1.0.0",
+        versionName = "1.1.0",
         loaded = true,
     )
 
     private val fresh = UiState(
         settings = Settings(),
         setup = SetupState(locationGranted = false, backgroundLocationGranted = false, locationServiceOn = true, batteryUnrestricted = false),
-        versionName = "1.0.0",
+        versionName = "1.1.0",
         loaded = true,
     )
 

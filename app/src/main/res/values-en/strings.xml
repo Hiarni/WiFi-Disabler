@@ -29,7 +29,7 @@
     <string name="reliability_battery_title">No battery restrictions</string>
     <string name="reliability_battery_desc">Lets the app react while the device is idle.</string>
     <string name="reliability_autostart_title">Allow autostart</string>
-    <string name="reliability_autostart_desc">On some devices, autostart or background activity must be allowed in the app settings.</string>
+    <string name="reliability_autostart_desc">This device blocks background apps until autostart is allowed.</string>
 
     <!-- Networks -->
     <string name="networks_title">Networks</string>
@@ -47,6 +47,7 @@
     <string name="options_title">Options</string>
     <string name="option_reliable_title">Reliable mode</string>
     <string name="option_reliable_desc">Keeps a silent background service running. Only needed if the system stops the app.</string>
+    <string name="option_reliable_hide_notification">Hide notification</string>
     <string name="option_notify_title">Notify on switch-off</string>
     <string name="option_notify_desc">Shows a silent notification when Wi-Fi was turned off. Failures are always reported.</string>
 

@@ -17,6 +17,8 @@ import androidx.compose.runtime.getValue
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import dev.hiarni.wifidisabler.core.Notifier
+import dev.hiarni.wifidisabler.core.Vendor
 import dev.hiarni.wifidisabler.ui.theme.WifiDisablerTheme
 
 class MainActivity : ComponentActivity() {
@@ -55,7 +57,8 @@ class MainActivity : ComponentActivity() {
                             launch(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
                         },
                         onBatteryUnrestricted = ::requestBatteryExemption,
-                        onOpenAppSettings = ::openAppSettings,
+                        onOpenAutostart = ::openAutostart,
+                        onHideServiceNotification = ::openServiceNotificationSettings,
                         onDismissReliability = viewModel::dismissReliabilityHint,
                         onOpenSource = { launch(Intent(Intent.ACTION_VIEW, SOURCE_URL.toUri())) },
                     ),
@@ -91,6 +94,28 @@ class MainActivity : ComponentActivity() {
 
     private fun openAppSettings() {
         launch(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, "package:$packageName".toUri()))
+    }
+
+    /** Opens the manufacturer's autostart page if one is known, otherwise the app info page. */
+    private fun openAutostart() {
+        val opened = Vendor.autostartPages.any { page ->
+            launch(Intent().setComponent(page).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+        }
+        if (!opened) openAppSettings()
+    }
+
+    /**
+     * Android requires a notification for the reliable-mode service, but the user may switch its
+     * channel off – the service keeps running. Opens exactly that channel's settings.
+     */
+    private fun openServiceNotificationSettings() {
+        Notifier.ensureServiceChannel(this)
+        val channel = Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
+            .putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+            .putExtra(Settings.EXTRA_CHANNEL_ID, Notifier.CHANNEL_SERVICE)
+        if (!launch(channel)) {
+            launch(Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, packageName))
+        }
     }
 
     private fun launch(intent: Intent): Boolean = try {

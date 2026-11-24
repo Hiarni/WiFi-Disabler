@@ -23,13 +23,13 @@ data class UiState(
     val settings: Settings = Settings(),
     val setup: SetupState = SetupState(true, true, true, true),
     val currentSsid: String? = null,
-    val aggressiveVendor: Boolean = false,
+    val hasAutostart: Boolean = false,
     val versionName: String = "",
     val loaded: Boolean = false,
 ) {
     val showReliabilityCard: Boolean
         get() = settings.isActive && !settings.reliabilityHintDismissed &&
-            (!setup.batteryUnrestricted || aggressiveVendor)
+            (!setup.batteryUnrestricted || hasAutostart)
 }
 
 class MainViewModel(app: Application) : AndroidViewModel(app) {
@@ -42,7 +42,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             settings = s,
             setup = setupState,
             currentSsid = ssid,
-            aggressiveVendor = Vendor.isAggressive(),
+            hasAutostart = Vendor.hasAutostart(),
             versionName = BuildConfigInfo.versionName(app),
             loaded = true,
         )

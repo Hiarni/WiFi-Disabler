@@ -30,7 +30,7 @@
     <string name="reliability_battery_title">Keine Akku-Einschränkungen</string>
     <string name="reliability_battery_desc">Damit die App auch im Ruhezustand reagieren kann.</string>
     <string name="reliability_autostart_title">Autostart erlauben</string>
-    <string name="reliability_autostart_desc">Auf manchen Geräten muss Autostart bzw. Hintergrundaktivität in den App-Einstellungen erlaubt werden.</string>
+    <string name="reliability_autostart_desc">Dieses Gerät blockiert Apps im Hintergrund, bis Autostart erlaubt ist.</string>
 
     <!-- Networks -->
     <string name="networks_title">Netzwerke</string>
@@ -48,6 +48,7 @@
     <string name="options_title">Optionen</string>
     <string name="option_reliable_title">Zuverlässiger Modus</string>
     <string name="option_reliable_desc">Hält einen stillen Hintergrunddienst aktiv. Nur nötig, wenn das System die App beendet.</string>
+    <string name="option_reliable_hide_notification">Benachrichtigung ausblenden</string>
     <string name="option_notify_title">Beim Abschalten benachrichtigen</string>
     <string name="option_notify_desc">Zeigt eine stille Benachrichtigung, wenn WLAN ausgeschaltet wurde. Fehler werden immer gemeldet.</string>
 

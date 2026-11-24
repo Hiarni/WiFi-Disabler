@@ -30,8 +30,24 @@ Play Protect warnt dabei, die App sei für eine ältere Android-Version gebaut. 
 2. **Standort › Immer zulassen:** Android verrät WLAN-Namen nur Apps mit Standortzugriff, auch im Hintergrund.
 3. **Standort eingeschaltet lassen:** Ist er aus, verbirgt Android Netzwerknamen vor allen Apps.
 
-Fertig. Die App zeigt nur Schritte an, die noch fehlen. Beendet das System die App im Hintergrund, helfen
-*Akku › Keine Beschränkungen*, *Autostart* in den App-Einstellungen oder der **zuverlässige Modus** in der App.
+Fertig. Die App zeigt nur Schritte an, die noch fehlen. Laufen muss sie dafür nicht: Android weckt sie, sobald
+sich das Gerät mit einem WLAN verbindet.
+
+### Wenn das System die App beendet
+
+- **Akku › Nicht eingeschränkt:** Die App zeigt diesen Schritt an, solange er fehlt.
+- **Autostart:** Gibt es nur bei Xiaomi, Huawei, Honor, Oppo, Realme, OnePlus, Vivo, Meizu, Tecno und Infinix. Die
+  App öffnet dort direkt die passende Seite. Samsung, Pixel, Motorola und Co. haben diese Einstellung nicht und
+  brauchen sie auch nicht. Bei Samsung die App aber nicht unter *Akku › Hintergrundnutzungslimits* als ruhend führen.
+- **Aufräumen und *Beenden erzwingen*:** Speicher-Booster, Reinigungs-Apps und *Beenden erzwingen* in der App-Info
+  stoppen die App komplett. Android löscht dabei auch die WLAN-Überwachung, und keine App darf sich danach selbst
+  wieder starten. Bis zum nächsten Öffnen ist WiFi Disabler dann aus. Abhilfe: die App in der Übersicht der
+  letzten Apps sperren (Schloss-Symbol bzw. *Geöffnet lassen*) oder im Reinigungs-Tool ausnehmen. *Cache leeren* ist
+  unbedenklich, *Speicher löschen* entfernt dagegen auch deine Netzwerkliste.
+- **Zuverlässiger Modus:** Ein stiller Hintergrunddienst, den Android nach normalem Beenden neu startet. Android
+  verlangt dafür eine Benachrichtigung. *Benachrichtigung ausblenden* in der App schaltet sie ab, der Dienst läuft
+  weiter.
+
 Gerätespezifische Anleitungen gibt es auf [dontkillmyapp.com](https://dontkillmyapp.com).
 
 > Wer nur nie wieder mit einem Netz verbunden werden will, braucht keine App: In den WLAN-Einstellungen das Netz

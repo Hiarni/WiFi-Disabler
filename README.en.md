@@ -30,8 +30,22 @@ will warn that the app was built for an older version of Android. That is intend
 2. **Location › Allow all the time:** Android only reveals Wi-Fi names to apps with location access, also in the background.
 3. **Keep location turned on:** with location off, Android hides network names from every app.
 
-That's it. The app only shows steps that are still missing. If the system stops the app in the background,
-*Battery › Unrestricted*, *Autostart* in the app settings or **reliable mode** in the app help.
+That's it. The app only shows steps that are still missing. It doesn't have to keep running: Android wakes it as
+soon as the device joins a Wi-Fi network.
+
+### If the system stops the app
+
+- **Battery › Unrestricted:** the app shows this step while it is missing.
+- **Autostart:** only exists on Xiaomi, Huawei, Honor, Oppo, Realme, OnePlus, Vivo, Meizu, Tecno and Infinix, where
+  the app opens the right page directly. Samsung, Pixel, Motorola and others don't have this setting and don't need
+  it. On Samsung, just don't list the app as sleeping under *Battery › Background usage limits*.
+- **Cleaning and *Force stop*:** memory boosters, cleaner apps and *Force stop* in the app info stop the app
+  completely. Android also drops the Wi-Fi watch, and no app may restart itself after that. WiFi Disabler stays off
+  until you open it again. Fix: lock the app in the recent apps overview (lock icon or *Keep open*) or exclude it in
+  the cleaner. *Clear cache* is harmless, *Clear storage* also deletes your network list.
+- **Reliable mode:** a silent background service that Android restarts after a normal stop. Android requires a
+  notification for it. *Hide notification* in the app switches it off, the service keeps running.
+
 Device-specific guides are on [dontkillmyapp.com](https://dontkillmyapp.com).
 
 > If you only never want to join a network again, you don't need an app: forget the network or turn off
