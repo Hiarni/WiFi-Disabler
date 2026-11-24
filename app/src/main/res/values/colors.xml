@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_petrol">#0E5A64</color>
+    <color name="brand_petrol_light">#12707A</color>
+    <color name="window_light">#F5FAFB</color>
+    <color name="window_dark">#0E1415</color>
+</resources>

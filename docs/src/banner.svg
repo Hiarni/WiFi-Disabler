@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12707A"/><stop offset="1" stop-color="#0A4650"/></linearGradient><clipPath id="cut"><path d="M2.6,0 L24,0 L24,21.4 Z M0,2.6 L0,24 L21.4,24 Z"/></clipPath>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B3E46"/><stop offset="1" stop-color="#062A30"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.15" r="0.7">
+      <stop offset="0" stop-color="#12707A" stop-opacity="0.55"/><stop offset="1" stop-color="#12707A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#page)"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+  <!-- decorative signal rings -->
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="2">
+    <circle cx="1152" cy="746" r="320"/>
+    <circle cx="1152" cy="746" r="480"/>
+    <circle cx="1152" cy="746" r="640"/>
+    <circle cx="1152" cy="746" r="800"/>
+  </g>
+  <g transform="translate(115 170) scale(2.7777777777777777)">
+    <rect width="108" height="108" rx="24" fill="url(#bg)"/>
+    <rect width="107" height="107" x="0.5" y="0.5" rx="23.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <g transform="translate(22.8 22.8) scale(2.6)"><g clip-path="url(#cut)"><path d="M9.525,14.525 A3.5,3.5 0 0,1 14.475,14.525 M7.05,12.05 A7,7 0 0,1 16.95,12.05 M4.575,9.575 A10.5,10.5 0 0,1 19.425,9.575" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.5" fill="#FFFFFF"/></g><path d="M4.2,4.2 L19.8,19.8" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round"/></g>
+  </g>
+  <g font-family="Inter, 'DejaVu Sans', sans-serif" fill="#FFFFFF">
+    <text x="479" y="309" font-size="92" font-weight="700" letter-spacing="-1">WiFi Disabler</text>
+    <text x="479" y="370" font-size="34" font-weight="500" fill-opacity="0.85">Turns Wi-Fi off on the networks you choose.</text>
+    <text x="479" y="416" font-size="27" font-weight="400" fill-opacity="0.6">Schaltet WLAN in den Netzen deiner Wahl ab.</text>
+    <rect x="479" y="448" width="82" height="6" rx="3" fill="#FF8A3D"/>
+  </g>
+</svg>

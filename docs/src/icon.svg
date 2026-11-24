@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 108 108">
+  <!-- WiFi Disabler app icon. Own artwork – not the Wi-Fi Alliance logo. -->
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12707A"/><stop offset="1" stop-color="#0A4650"/></linearGradient><clipPath id="cut"><path d="M2.6,0 L24,0 L24,21.4 Z M0,2.6 L0,24 L21.4,24 Z"/></clipPath></defs>
+  <rect width="108" height="108" rx="24" fill="url(#bg)"/>
+  <g transform="translate(22.8 22.8) scale(2.6)"><g clip-path="url(#cut)"><path d="M9.525,14.525 A3.5,3.5 0 0,1 14.475,14.525 M7.05,12.05 A7,7 0 0,1 16.95,12.05 M4.575,9.575 A10.5,10.5 0 0,1 19.425,9.575" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.5" fill="#FFFFFF"/></g><path d="M4.2,4.2 L19.8,19.8" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round"/></g>
+</svg>

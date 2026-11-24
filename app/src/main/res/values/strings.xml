@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">WiFi Disabler</string>
+
+    <!-- Status -->
+    <string name="status_active">Aktiv</string>
+    <plurals name="status_active_desc">
+        <item quantity="one">Überwacht %d Netzwerk</item>
+        <item quantity="other">Überwacht %d Netzwerke</item>
+    </plurals>
+    <string name="status_limited">Einrichtung unvollständig</string>
+    <string name="status_limited_desc">Netzwerknamen können noch nicht gelesen werden – siehe unten.</string>
+    <string name="status_paused">Pausiert</string>
+    <string name="status_paused_desc">WLAN bleibt unangetastet.</string>
+    <string name="status_empty">Noch keine Netzwerke</string>
+    <string name="status_empty_desc">Füge unten ein Netzwerk hinzu.</string>
+
+    <!-- Setup -->
+    <string name="setup_title">Einrichtung</string>
+    <string name="setup_desc">Android verrät WLAN-Namen nur Apps mit Standortzugriff. Dein Standort wird weder gelesen noch gespeichert.</string>
+    <string name="setup_location_title">Standortzugriff: immer</string>
+    <string name="setup_location_desc">Nötig, um den Netzwerknamen zu lesen.</string>
+    <string name="setup_location_background_desc">„Immer zulassen“ wählen, damit es auch im Hintergrund funktioniert.</string>
+    <string name="setup_location_service_title">Standort eingeschaltet</string>
+    <string name="setup_location_service_desc">Ohne ihn verbirgt Android Netzwerknamen vor allen Apps.</string>
+
+    <!-- Reliability -->
+    <string name="reliability_title">Zuverlässigkeit</string>
+    <string name="reliability_desc">Manche Systeme beenden Hintergrund-Apps. Diese optionalen Schritte verhindern das.</string>
+    <string name="reliability_battery_title">Keine Akku-Einschränkungen</string>
+    <string name="reliability_battery_desc">Damit die App auch im Ruhezustand reagieren kann.</string>
+    <string name="reliability_autostart_title">Autostart erlauben</string>
+    <string name="reliability_autostart_desc">Auf manchen Geräten muss Autostart bzw. Hintergrundaktivität in den App-Einstellungen erlaubt werden.</string>
+
+    <!-- Networks -->
+    <string name="networks_title">Netzwerke</string>
+    <string name="networks_desc">WLAN wird ausgeschaltet, sobald sich das Gerät mit einem dieser Netzwerke verbindet.</string>
+    <string name="networks_add_current">„%1$s“ hinzufügen</string>
+    <string name="networks_input_label">Netzwerkname (SSID)</string>
+    <string name="networks_input_invalid">Kein gültiger Netzwerkname (max. 32 Zeichen).</string>
+    <string name="networks_empty">Keine Netzwerke hinzugefügt.</string>
+    <plurals name="networks_count">
+        <item quantity="one">%d Netzwerk</item>
+        <item quantity="other">%d Netzwerke</item>
+    </plurals>
+
+    <!-- Options -->
+    <string name="options_title">Optionen</string>
+    <string name="option_reliable_title">Zuverlässiger Modus</string>
+    <string name="option_reliable_desc">Hält einen stillen Hintergrunddienst aktiv. Nur nötig, wenn das System die App beendet.</string>
+    <string name="option_notify_title">Beim Abschalten benachrichtigen</string>
+    <string name="option_notify_desc">Zeigt eine stille Benachrichtigung, wenn WLAN ausgeschaltet wurde. Fehler werden immer gemeldet.</string>
+
+    <!-- History -->
+    <string name="history_title">Letzte Aktivität</string>
+    <string name="history_success">WLAN ausgeschaltet</string>
+    <string name="history_failed">WLAN konnte nicht ausgeschaltet werden</string>
+
+    <!-- Actions -->
+    <string name="action_allow">Erlauben</string>
+    <string name="action_turn_on">Einschalten</string>
+    <string name="action_open">Öffnen</string>
+    <string name="action_add">Hinzufügen</string>
+    <string name="action_clear">Leeren</string>
+    <string name="action_dismiss">Ausblenden</string>
+    <string name="action_remove_network">%1$s entfernen</string>
+
+    <!-- Footer -->
+    <string name="footer_source">Version %1$s · GPL-3.0 · Quellcode</string>
+    <string name="footer_privacy">Kein Tracking. Kein Internetzugriff. Alles bleibt auf deinem Gerät.</string>
+
+    <!-- Tile -->
+    <string name="tile_no_networks">Keine Netzwerke</string>
+
+    <!-- Notifications -->
+    <string name="channel_service_name">Hintergrunddienst</string>
+    <string name="channel_service_desc">Stille Benachrichtigung, die Android im zuverlässigen Modus verlangt.</string>
+    <string name="channel_events_name">Abschalt-Hinweise</string>
+    <string name="channel_events_desc">Erscheint, wenn WLAN ausgeschaltet wurde oder nicht ausgeschaltet werden konnte.</string>
+    <string name="service_notification_title">Überwacht WLAN-Verbindungen</string>
+    <string name="event_notification_success">WLAN ausgeschaltet – verbunden mit „%1$s“.</string>
+    <string name="event_notification_failed">WLAN konnte für „%1$s“ nicht ausgeschaltet werden.</string>
+</resources>

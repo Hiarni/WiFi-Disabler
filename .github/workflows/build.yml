@@ -1,0 +1,45 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: APK bauen
+        run: |
+          ./gradlew testDebugUnitTest lintRelease assembleRelease --no-daemon
+          v=$(sed -n 's/.*versionName = "\(.*\)".*/\1/p' app/build.gradle.kts)
+          echo "VERSION=$v" >> "$GITHUB_ENV"
+          cp app/build/outputs/apk/release/app-release.apk "WiFi-Disabler-v$v.apk"
+
+      - name: Release
+        if: github.ref_name == 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="v$VERSION"
+          apk="WiFi-Disabler-v$VERSION.apk"
+          awk -v v="## $VERSION" '$0==v{f=1;next} /^## /{f=0} f' CHANGELOG.md > notes.md
+          printf '\nEinrichtung siehe README · Setup: see README.en.md\n' >> notes.md
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release delete "$tag" --yes --cleanup-tag
+          fi
+          gh release create "$tag" "$apk" --title "WiFi Disabler v$VERSION" --notes-file notes.md --target "$GITHUB_SHA"
+          for t in $(gh release list --limit 100 --json tagName -q '.[].tagName'); do
+            [ "$t" = "$tag" ] || gh release delete "$t" --yes --cleanup-tag
+          done
