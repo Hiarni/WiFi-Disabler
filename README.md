@@ -78,7 +78,7 @@ Jeder Push auf `main` baut die APK und veröffentlicht sie als Release.
 
 ## Lizenz
 
-Der Code steht unter der [GPL-3.0](LICENSE). Mitgelieferte Bibliotheken haben eigene Lizenzen, siehe
+Der Code steht unter der [MIT-Lizenz](LICENSE). Mitgelieferte Bibliotheken haben eigene Lizenzen, siehe
 [Drittanbieter-Hinweise](THIRD_PARTY_NOTICES.md).
 
 Wi-Fi® ist eine eingetragene Marke der Wi-Fi Alliance, Android eine Marke von Google LLC. WiFi Disabler ist ein

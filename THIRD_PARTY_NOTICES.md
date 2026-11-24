@@ -1,9 +1,9 @@
 # Third-party notices
 
-WiFi Disabler is licensed under the [GNU General Public License v3.0](LICENSE). It includes or uses the following
+WiFi Disabler is licensed under the [MIT License](LICENSE). It includes or uses the following
 third-party components, each under its own license.
 
-*Deutsch: WiFi Disabler steht unter der GPL-3.0. Die App enthält bzw. nutzt die folgenden Bestandteile anderer
+*Deutsch: WiFi Disabler steht unter der MIT-Lizenz. Die App enthält bzw. nutzt die folgenden Bestandteile anderer
 Urheber, jeweils unter deren eigener Lizenz.*
 
 ## Libraries

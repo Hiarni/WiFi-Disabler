@@ -65,7 +65,7 @@
     <string name="action_remove_network">Remove %1$s</string>
 
     <!-- Footer -->
-    <string name="footer_source">Version %1$s · GPL-3.0 · Source code</string>
+    <string name="footer_source">Version %1$s · MIT · Source code</string>
     <string name="footer_privacy">No tracking. No internet access. Everything stays on your device.</string>
 
     <!-- Tile -->
