@@ -1,0 +1,15 @@
+# Textdateien automatisch erkennen und Zeilenenden normalisieren
+* text=auto
+
+# Linux-Startskript mit LF
+/gradlew        text eol=lf
+
+# Windows-Skripte mit CRLF
+*.bat           text eol=crlf
+
+# Binärdateien unverändert lassen
+*.jar           binary
+*.apk           binary
+*.zip           binary
+*.keystore      binary
+*.png           binary
