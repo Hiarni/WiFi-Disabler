@@ -47,13 +47,16 @@ jobs:
             exit 1
           fi
           url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/blob/main"
+          img="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/docs/flags"
+          de_flag="<img src=\"$img/de.png\" height=\"14\" alt=\"\">"
+          gb_flag="<img src=\"$img/gb.png\" height=\"14\" alt=\"\">"
           {
-            echo "### 🇩🇪 Deutsch"; echo
+            echo "### $de_flag Deutsch"; echo
             echo "$de"; echo
-            echo "### 🇬🇧 English"; echo
+            echo "### $gb_flag English"; echo
             echo "$en"; echo
             echo "---"; echo
-            echo "🇩🇪 [Einrichtung]($url/README.md) · [Alle Änderungen]($url/CHANGELOG.md) &nbsp;·&nbsp; 🇬🇧 [Setup]($url/README.en.md) · [Changelog]($url/CHANGELOG.en.md)"
+            echo "$de_flag [Einrichtung]($url/README.md) · [Alle Änderungen]($url/CHANGELOG.md) &nbsp;·&nbsp; $gb_flag [Setup]($url/README.en.md) · [Changelog]($url/CHANGELOG.en.md)"
           } > notes.md
           gh release create "$tag" "$apk" --title "WiFi Disabler v$VERSION" --notes-file notes.md --target "$GITHUB_SHA"
           for t in $(gh release list --limit 100 --json tagName -q '.[].tagName'); do

@@ -1,6 +1,6 @@
 <div align="center">
 
-🇩🇪 <a href="CHANGELOG.md">Deutsch</a> &nbsp;·&nbsp; 🇬🇧 <b>English</b>
+<img src="docs/flags/de.png" height="14" alt=""> <a href="CHANGELOG.md">Deutsch</a> &nbsp;·&nbsp; <img src="docs/flags/gb.png" height="14" alt=""> <b>English</b>
 
 <img src="docs/icon.png" width="72" alt="WiFi Disabler">
 
