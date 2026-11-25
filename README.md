@@ -8,7 +8,7 @@
 
 **Schaltet WLAN automatisch aus, sobald sich dein Android-Gerät mit einem gewählten Netz verbindet.**
 
-[Download](../../releases/latest) · [Einrichten](#einrichten) · [Funktionen](#funktionen)
+[Download](../../releases/latest) · [Einrichten](#einrichten) · [Funktionen](#funktionen) · [Änderungen](CHANGELOG.md)
 
 </div>
 

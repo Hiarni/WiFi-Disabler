@@ -8,7 +8,7 @@
 
 **Turns Wi-Fi off automatically as soon as your Android device connects to a network you chose.**
 
-[Download](../../releases/latest) · [Setup](#setup) · [Features](#features)
+[Download](../../releases/latest) · [Setup](#setup) · [Features](#features) · [Changelog](CHANGELOG.en.md)
 
 </div>
 
